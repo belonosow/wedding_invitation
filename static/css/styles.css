@@ -51,7 +51,7 @@ body {
 
 /* Открытка */
 .card-container {
-    position: fixed;
+    position: fixed; /* Фиксированная позиция */
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -139,8 +139,8 @@ body {
 
 /* Блок с фотографией справа */
 .photo-sidebar {
-    position: absolute; /* Прокручивается вместе с сайтом */
-    top: 250px; /* Отступ сверху */
+    position: fixed; /* Прокручивается вместе с сайтом */
+    top: 50px; /* Отступ сверху */
     right: 20px;
     width: 240px; /* Уменьшен на 20% */
     background-color: rgba(255, 255, 255, 0.8);
