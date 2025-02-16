@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f8; /* Нежный свадебный цвет фона */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+/* Навигационное меню */
+.navbar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0; /* Скрыто вначале */
+    transition: opacity 1s;
+}
+
+.navbar.visible {
+    opacity: 1; /* Появляется вместе с основным блоком */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #d4a276;
+    font-size: 1em;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Открытка */
+.card-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Для 3D-эффекта */
+    z-index: 1000;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg); /* Переворот открытки */
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Скрыть обратную сторону */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .front {
+    background-color: #e0b48d; /* Цвет передней стороны */
+}
+
+.card .back {
+    background-color: #d4a276; /* Цвет задней стороны */
+    transform: rotateY(180deg); /* Изначально скрыта */
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+/* Основные блоки */
+.content {
+    margin: 250px auto 0; /* Отступ сверху и центрирование */
+    max-width: 800px; /* Ширина основного контента */
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.content.visible {
+    opacity: 1; /* Появляется вместе с навигацией */
+}
+
+.block {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для изображений */
+.block img {
+    width: 100%; /* Занимает всю ширину блока */
+    height: auto; /* Сохраняет пропорции */
+    border-radius: 10px; /* Скругление углов */
+}
+
+/* Блок с фотографией справа */
+.photo-sidebar {
+    position: absolute; /* Прокручивается вместе с сайтом */
+    top: 250px; /* Отступ сверху */
+    right: 20px;
+    width: 240px; /* Уменьшен на 20% */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    opacity: 0; /* Скрыто вначале */
+    transition: opacity 1s;
+}
+
+.photo-sidebar.visible {
+    opacity: 1; /* Появляется вместе с основным блоком */
+}
+
+.photo-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

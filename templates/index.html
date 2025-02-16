@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#block1">Дата</a></li>
+            <li><a href="#block2">Теплые слова</a></li>
+            <li><a href="#block3">Программа</a></li>
+            <li><a href="#block4">Примеры нарядов</a></li>
+            <li><a href="#block5">Контакты</a></li>
+            <li><a href="#block6">Анкета</a></li>
+        </ul>
+    </nav>
+
+    <!-- Открытка -->
+    <div class="card-container" id="card-container">
+        <div class="card" id="card">
+            <div class="front">
+                <h1>Для вас информация</h1>
+            </div>
+            <div class="back">
+                <h1>Вы приглашены на свадьбу!</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основные блоки (скрыты вначале) -->
+    <div class="content" id="content">
+        <div class="block" id="block1">
+            <h2>2.08.2025</h2>
+            <p>состоится наше свадебное событие</p>
+            <p>свадьба Андрея и Марии</p>
+        </div>
+        <div class="block">
+            <img src="static/picture/two_people.jpg" alt="Свадебное фото">
+        </div>
+        <div class="block" id="block2">
+            <p>Мы очень хотим оказаться в окружении самых близких и дорогих для нас людей в день, когда мы станем семьей!</p>
+        </div>
+        <div class="block">
+            <img src="static/picture/all_family.jpg" alt="Свадебное фото">
+        </div>
+        <div class="block" id="block3">
+            <ul>
+                <li>Пункт 1: Пример текста</li>
+                <li>Пункт 2: Пример текста</li>
+                <li>Пункт 3: Пример текста</li>
+            </ul>
+        </div>
+        <div class="block" id="block4">
+            <img src="https://via.placeholder.com/600x400" alt="Цветовая гамма">
+            <p>Мы Вас очень ждем <3</p>
+        </div>
+        <div class="block" id="block5">
+            <h3>В случае возникновения вопросов:</h3>
+            <ul>
+                <li>Андрей, +79999999999</li>
+                <li>Мария, +79999999999</li>
+                <li>Ведущий, +79999999999</li>
+            </ul>
+        </div>
+        <div class="block" id="block6">
+            <p>Просим для вашего и нашего удобства <a href="https://www.google.com" target="_blank">пройти опрос</a>.</p>
+        </div>
+    </div>
+
+    <!-- Блок с фотографией справа -->
+    <div class="photo-sidebar">
+        <div class="photo-text">
+            <p>Наши счастливые моменты</p>
+        </div>
+        <div class="photo-container">
+            <img src="static/picture/palette.jpg" alt="Вертикальное фото">
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
